@@ -1,0 +1,1200 @@
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+
+\chapter{Introduction}
+\label{ch:intro}
+\section{Purpose of the Requirements Document}
+  A product requirements document (PRD) is a document containing all the requirements to a certain product. It is written to allow people to understand what a product should do. A PRD should, however, generally avoid anticipating or defining how the product will do it in order to later allow interface designers and engineers to use their expertise to provide the optimal solution to the requirements.
+  \\PRDs are most frequently written for software products, which can be used for any type of product and also for services. Typically, a PRD is created from a user's point-of-view by a user/client or a company's marketing department (in the latter case it may also be called Marketing Requirements Document (MRD). The requirements are then analyzed by a (potential) maker/supplier from a more technical point of view, broken down and detailed in a Functional Specification (sometimes also called Technical Requirements Document).
+
+\section{Product Scope}
+\section{Document Conventions}
+\section{Definitions, Acronyms and Abbreviations}
+\section{References}
+\begin{itemize}
+\item[1]IEEE Standard for Software Configuration Management Plans - Redline," in IEEE Std 828-2005 (Revision of IEEE Std 828-1998) - Redline , vol., no., pp.1-32, 12 Aug. 2005\\
+\item[2]G. Hatzivasilis, I. Papaefstathiou and C. Manifavas, "Software Security, Privacy, and Dependability: Metrics and Measurement," in IEEE Software, vol. 33, no. 4, pp. 46-54, July-Aug. 2016.doi: 10.1109/MS.2016.61\\
+\item[3]Mei-Hwa Chen, Mei-Huei Tang and Wen-Li Wang, "Effect of architecture configuration on software reliability and performance estimation," Proceedings. 1998 IEEE Workshop on Application-Specific Software Engineering and Technology. ASSET-98 (Cat. No.98EX183), Richardson, TX, USA, 1998, pp. 90-95.\\
+\item[4]ROGERS.PRESSMAN. SOFTWARE ENGINEERING : A PRACTITIONER'S APPROACH [M] Software engineering:a practitioner's approach. 2008.\\
+\item[5]Leeson, Marjorie. Systems Analysis and Design[M]. Science Research Associates,Inc, 1985.\\
+\item[6]Larman C. Applying UML and patterns: an introduction to object-oriented analysis and design[M] Applying UML and Patterns: An Introduction to Object-Oriented Analysis and Design and Iterative Development (3rd Edition). 2004.\\
+\item[7]Tan P N, Steinbach M, Kumar V. Introduction to Data Mining: Global Edition, 2/E[J]. Pearson Schweiz Ag.
+\end{itemize}
+\section{Intended Audience and Reading Suggestions}
+  The Requirements Document Report addresses a variety of Intended.  Audience, including users, designers, developers, project managers, marketers, testers, document writers, etc.
+  \\This document introduces them separately, including: Introduction, Overall Description, External Interface Requirements, Functional Requirements, Activity Diagrams, Other Nonfunctional Requirements and Other Requirements.
+
+
+
+\chapter{Overall Description}
+\label{Overall Description}
+
+\section{Product Perspective}
+
+
+\section{Product Functions}
+\subsection{Account module}
+\subsubsection{Log in}
+\begin{enumerate}[label=\alph*.]
+    \item The registered customer person can log
+in the system to enjoy our all services including suggesting to purchase, managing cart, confirming orders, paying, cancelling orders, refunding, commending, preordering, browsing book detail, browsing knowledge map, browsing bestsellers, browsing golden words.
+    \item The purchaser can log in the system to manage stock, view reorder point report, purchase, handle purchase exceptions and view stock warning.
+    \item The user manager can log in to handle accounts exceptions.
+    \item The manager can log in to view bestsellers reports, view customers reports, manage books suggested  to purchase, view suggested  books reports, modify suggested books reports, confirm suggested books, manage discounts plan, view discounts plan, modify discounts plan, add discounts plan, delete discounts plan and manage stock.
+    \item The system manager can log in to manage all data in database.
+\end{enumerate}
+
+\subsubsection{Register}
+\begin{enumerate}[label=\alph*.]
+    \item The customer can register to enjoy our all serves.
+    \item The manager and purchaser are supposed to register through system manager. 
+\end{enumerate}
+
+\subsubsection{Modify Personal Information}
+\begin{enumerate}[label=\alph*.]
+    \item Customer can modify their personal information including nickname, name, email, phone number, portrait.
+\end{enumerate}
+
+\subsubsection{Manage Address Details}
+\begin{enumerate}[label=\alph*.]
+    \item Customer can add, modify, delete and view their address details including delivery address, recipient name and phone number.
+\end{enumerate}
+
+% Subsection Browse Module
+\subsection{Browse module}
+\subsubsection{Browse Book Detail}
+\begin{enumerate}[label=\alph*.]
+    \item Customer can browse book details including name, cover, price, commend, inventory and part of book’s content.
+\end{enumerate}
+
+\subsubsection{Browse Recommendation}
+\begin{enumerate}[label=\alph*.]
+    \item System will generate the personal recommendation according
+to the customer’s browsing history and order history.
+    \item Customer  can browse books' recommendations.
+\end{enumerate}
+
+\subsubsection{Browse Knowledge Map}
+\begin{enumerate}[label=\alph*.]
+    \item System will generate the personal recommendation according
+to the customer’s browsing history and order history.
+    \item Customer can browse books' recommendations.
+\end{enumerate}
+
+\subsubsection{Browse Bestsellers}
+\begin{enumerate}[label=\alph*.]
+    \item Customer can browse bestsellers.
+\end{enumerate}
+
+\subsubsection{Browse Golden Words}
+\begin{enumerate}[label=\alph*.]
+    \item Customer can browse golden words in the book provided by "jvzimi".
+\end{enumerate}
+
+\subsection{Shopping module}
+\subsubsection{Manage Cart}
+\begin{enumerate}[label=\alph*.]
+    \item Customer can add, modify, delete and view books in their cart.
+\end{enumerate}
+
+\subsubsection{Manage Orders}
+\begin{enumerate}[label=\alph*.]
+    \item Customer can confirm orders when they select some books with stock in their cart.
+    \item Customer can preorder book lack of stock.
+    \item Customer can cancel orders after confirming orders before paying.
+    \item After preorder and pay, system will email client about deadline.
+\end{enumerate}
+
+\subsubsection{Pay and Refund}
+\begin{enumerate}[label=\alph*.]
+    \item Customer can pay through alipay, wechat or credit card.
+    \item System will calculate taxes, delivery fee and discounts according to delivery address and shipping address.
+    \item Customer can refund after receiving books.
+\end{enumerate}
+
+\subsubsection{Commend}
+\begin{enumerate}[label=\alph*.]
+    \item Customer can commend the book and service after receiving book.
+\end{enumerate}
+
+% subsection Extra module
+\subsection{Extra Module}
+\subsubsection{Suggest to Purchase}
+\begin{enumerate}[label=\alph*.]
+    \item Customer can suggest to purchase book which can't be found in our virtual store and wanna buy.
+\end{enumerate}
+
+% subsection Management module
+\subsection{Management Module}
+\subsubsection{View Bestsellers Reports}
+\begin{enumerate}[label=\alph*.]
+    \item System generates weekly Bestsellers Reports, monthly Bestsellers Reports and quarterly Bestsellers Reports according to sales record.
+    \item Manager can view the Bestsellers Reports.
+\end{enumerate}
+
+\subsubsection{View BestCustomer Reports}
+\begin{enumerate}[label=\alph*.]
+    \item System generates weekly BestCustomer Reports, monthly BestCustomer Reports and quarterly BestCustomer Reports according to sales record.
+    \item Manager can view the BestCustomer Reports .
+\end{enumerate}
+
+\subsubsection{View Selling Prediction}
+\begin{enumerate}[label=\alph*.]
+    \item System generates the selling prediction reports for each book through data mining.
+    \item Manager can view the Selling Prediction Reports.
+\end{enumerate}
+
+\subsubsection{Manage Books Suggested to Purchase}
+\begin{enumerate}[label=\alph*.]
+    \item  System generates the suggested books reports according to customers' suggestion
+
+    \item Manager can view suggested books reports
+
+    \item Manager can modify suggested books reports
+
+    \item Manager can confirm suggested books
+
+\end{enumerate}
+
+\subsubsection{Manage Discounts Plan}
+\begin{enumerate}[label=\alph*.]
+    \item Manager can design the discount plan for visual store
+
+    \item Manager can view discounts plan
+
+    \item Manager can modify discounts plan
+
+    \item Manager can add discounts plan
+
+    \item Manager can delete discounts plan
+\end{enumerate}
+
+% subsection Purchase Module
+\subsection{Purchase Module}
+\subsubsection{View Reorder Point Report}
+\begin{enumerate}[label=\alph*.]
+    \item System can predict the reorder date and reorder amount (reorder point) for every book, and generate reorder point report according to reordering theory and the predicted data. The reordering theory use the formula that reorder point = stock consumption during purcahse + safety stock quantity. Reorder point theory predicts sales selling quantity according to probability, obtains consumption during purchase and determines the time and quantity of reordering, so that the stock is not lower than the safety stock quantity. So in theory there is no case where the stock is 0.
+
+    \item Purchaser can view the reorder point report
+\end{enumerate}
+
+\subsubsection{Purchase}
+\begin{enumerate}[label=\alph*.]
+    \item Purchaser can purchase new books according to Reorder Point Report.
+\end{enumerate}
+
+\subsubsection{Handle Order Exceptions}
+\begin{enumerate}[label=\alph*.]
+    \item  In theory there is no case where the stock is 0. In fast, the phenomenon that book that the customer wants to buy is not in stock and cannot be pre-ordered may exist. System will alert order exceptions to purchaser.
+
+    \item Purchaser can add the book into reorder point report manually to handle the order exceptions.
+\end{enumerate}
+
+\subsubsection{View Stock Warnings}
+\begin{enumerate}[label=\alph*.]
+    \item When it is close to the order date of the reorder point, the system send the purchaser stock warning to remind him of reordering.
+
+    \item Purchaser can view stock warnings to see what book needs replenishment.
+\end{enumerate}
+
+\subsection{User Management Module}
+\subsubsection{Handle Accounts Exceptions}
+\begin{enumerate}[label=\alph*.]
+    \item When the account is abnormally logged in or the purchase is abnormal, the system will send the user manager corresponding accounts exceptions.
+
+    \item User manager can handle account exceptions.
+\end{enumerate}
+
+\section{User Classes and Characteristics}
+
+
+\section{Operating Environment}
+
+\section{Design and Implementation Constraints}
+
+\section{Assumptions and Dependencies}
+
+\newpage
+
+
+
+
+\chapter{External Interface Requirements}
+\label{External Interface Requirements}
+
+\section{User Interfaces}
+
+
+\section{Hardware Interfaces}
+\section{Software Interfaces}
+\section{Communications Interfaces}
+
+
+\chapter{Functional Requirements}
+\label{System Features}
+\section{Global View on Use Cases}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\columnwidth]{images/UseCase.png}
+    \caption{Caption}
+    \label{fig:Use_Case}
+\end{figure}
+
+\section{Accounts Module}
+
+\begin{figure}[H]
+	\centering  
+	\includegraphics[width=0.7\linewidth]{images/Account-Module.png}  
+	\caption{Account Module}  
+	\label{fig:Account-Module}   
+\end{figure}
+\subsection{Use Case: Log In}
+\subsection{Use Case: Register}
+\subsection{Use Case: Modify Personal Information}
+\subsection{Use Case: Log Out}
+\subsection{Use Case: Add Address Details}
+
+\section{Browse Module}
+\begin{figure}[H]
+	\centering  
+	\includegraphics[width=0.7\linewidth]{images/Browse-Module.png}
+	\caption{Browse Module}  
+	\label{fig:Browse-Module}   
+\end{figure}
+
+\subsection{Use Case: Browse Detail}
+\begin{table}[H]
+\caption{Use Case 4.3.1 Browse Detail}
+\centering
+\setlength{\tabcolsep}{10mm}{
+\begin{tabular}{|p{4cm}|p{8cm}|}
+\hline  % 在表格最上方绘制横线
+Use case name&Browse Detail\\
+\hline  % 在表格最上方绘制横线
+Case ID&Use case 4.3.1\\
+\hline  %在第一行和第二行之间绘制横线
+Actor&Customer\\
+\hline % 在表格最下方绘制横线
+Use case description&Customer can browse book details including name, cover, price, commend, inventory and
+part of book’s content\\
+\hline % 在表格最下方绘制横线
+Precondition& Customer already logs in the book store.
+\\
+\hline % 在表格最下方绘制横线
+Basic event stream&
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item Customer click one certain book.
+\item System will get the book details including name, cover, price, commend, inventory and part of book’s content from database
+\item System will show the details for customer.
+\item Customer can browse them.
+\end{enumerate}
+
+\\
+\hline % 在表格最下方绘制横线
+Alternative flow&
+None.
+\\
+\hline % 在表格最下方绘制横线
+Abnormal&None\\
+\hline % 在表格最下方绘制横线
+Postconditions& None.\\
+\hline % 在表格最下方绘制横线
+\end{tabular}
+}
+\end{table}
+
+\subsection{Use Case: Browse Personal Recommendation}
+\begin{table}[H]
+\caption{Use Case 4.3.2 Browse Personal Recommendation}
+\centering
+\setlength{\tabcolsep}{10mm}{
+\begin{tabular}{|p{4cm}|p{8cm}|}
+\hline  % 在表格最上方绘制横线
+Use case name&Browse Personal Recommendation\\
+\hline  % 在表格最上方绘制横线
+Case ID&Use case 4.3.2\\
+\hline  %在第一行和第二行之间绘制横线
+Actor&Customer\\
+\hline % 在表格最下方绘制横线
+Use case description&System will generate the personal recommendation according to the customer’s browsing history and order history. Customer can browse books' recommendations.\\
+\hline % 在表格最下方绘制横线
+Precondition& Customer already logs in the book store.
+\\
+\hline % 在表格最下方绘制横线
+Basic event stream&
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item Customer click one certain book.
+\item System will get the book details including name, cover, price, commend, inventory and part of book’s content from database
+\item System will show the details for customer.
+\item Customer can browse them.
+\end{enumerate}
+\\
+\hline % 在表格最下方绘制横线
+Alternative flow&
+None.
+\\
+\hline % 在表格最下方绘制横线
+Abnormal&None\\
+\hline % 在表格最下方绘制横线
+Postconditions& None.\\
+\hline % 在表格最下方绘制横线
+\end{tabular}
+}
+\end{table}
+
+
+\subsection{Use Case: Browse Knowledge Map}
+\begin{table}[H]
+\caption{Use Case 4.3.3 Browse Knowledge Map}
+\centering
+\setlength{\tabcolsep}{10mm}{
+\begin{tabular}{|p{4cm}|p{8cm}|}
+\hline  % 在表格最上方绘制横线
+Use case name& Browse Knowledge Map\\
+\hline  % 在表格最上方绘制横线
+Case ID&Use case 4.3.3\\
+\hline  %在第一行和第二行之间绘制横线
+Actor&Customer\\
+\hline % 在表格最下方绘制横线
+Use case description&Customer can browse book's knowledge map containing the related books, the notable books in the same domain and the author’s other publications.
+\\
+\hline % 在表格最下方绘制横线
+Precondition& Customer already logs in the book store and click one certain book.
+\\
+\hline % 在表格最下方绘制横线
+Basic event stream&
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item Customer click the knowledge map.
+\item System will generate and get the book's related book list containing the related books, the notable books in the same domain and the author’s other publications from database.
+\item System generate knowledge map and show it to customer.
+\item System customer can browse them.
+\end{enumerate}
+\\
+\hline % 在表格最下方绘制横线
+Alternative flow&None.
+\\
+\hline % 在表格最下方绘制横线
+Abnormal&None\\
+\hline % 在表格最下方绘制横线
+Postconditions& None.\\
+\hline % 在表格最下方绘制横线
+\end{tabular}
+}
+\end{table}
+
+
+\subsection{Use Case: Browse Bestsellers}
+\begin{table}[H]
+\caption{Use Case 4.3.4 Browse Bestsellers}
+\centering
+\setlength{\tabcolsep}{10mm}{
+\begin{tabular}{|p{4cm}|p{8cm}|}
+\hline  % 在表格最上方绘制横线
+Use case name&Browse Bestsellers\\
+\hline  % 在表格最上方绘制横线
+Case ID&Use case 4.3.4\\
+\hline  %在第一行和第二行之间绘制横线
+Actor&Customer\\
+\hline % 在表格最下方绘制横线
+Use case description&System generates the weekly, monthly and yearly bestseller report. Customer can browse bestsellers.\\
+\hline % 在表格最下方绘制横线
+Precondition& Customer already logs in the book store.
+\\
+\hline % 在表格最下方绘制横线
+Basic event stream&
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item Customer click the bestsellers.
+\item System get the weekly bestseller report, monthly bestseller report and yearly bestseller report from database
+\item System show them to customer.
+\item Customer can browse them.
+\end{enumerate}
+\\
+\hline % 在表格最下方绘制横线
+Alternative flow&
+None.
+\\
+\hline % 在表格最下方绘制横线
+Abnormal&None\\
+\hline % 在表格最下方绘制横线
+Postconditions& None.\\
+\hline % 在表格最下方绘制横线
+\end{tabular}
+}
+\end{table}
+
+\subsection{Use Case: Browse Golden Words}
+\begin{table}[H]
+\caption{Use Case 4.3.5 Browse Golden Words}
+\centering
+\setlength{\tabcolsep}{10mm}{
+\begin{tabular}{|p{4cm}|p{8cm}|}
+\hline  % 在表格最上方绘制横线
+Use case name&Browse Golden Words\\
+\hline  % 在表格最上方绘制横线
+Case ID&Use case 4.3.5\\
+\hline  %在第一行和第二行之间绘制横线
+Actor&Customer\\
+\hline % 在表格最下方绘制横线
+Use case description&Customer can browse golden words provided by "jvzimi" in the book.\\
+\hline % 在表格最下方绘制横线
+Precondition& Customer already logs in the book store and click one certain book.
+\\
+\hline % 在表格最下方绘制横线
+Basic event stream&
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item Customer click the golden words.
+\item System get the golden words in book provided by “jvzimi” from database.
+\item System show them to customer.
+\item Customer can browse them.
+\end{enumerate}
+
+\\
+\hline % 在表格最下方绘制横线
+Alternative flow&
+None.
+\\
+\hline % 在表格最下方绘制横线
+Abnormal&None\\
+\hline % 在表格最下方绘制横线
+Postconditions& None.\\
+\hline % 在表格最下方绘制横线
+\end{tabular}
+}
+\end{table}
+
+\section{Shopping Module}
+\begin{figure}[H]
+	\centering  
+	\includegraphics[width=0.7\linewidth]{images/Shopping-Module.png}
+	\caption{Shopping Module}  
+	\label{fig:Shopping-Module}   
+\end{figure}
+
+\subsection{Use Case: Add to Cart}
+
+\begin{table}[H]
+\caption{Use Case 4.4.1 Add to Cart}
+\centering
+\setlength{\tabcolsep}{10mm}{
+\begin{tabular}{|p{4cm}|p{8cm}|}
+\hline  % 在表格最上方绘制横线
+Use case name&Add To Cart\\
+\hline  % 在表格最上方绘制横线
+Case ID&Use case 4.4.1\\
+\hline  %在第一行和第二行之间绘制横线
+Actor&Customer\\
+\hline % 在表格最下方绘制横线
+Use case description&Users add items to the shopping cart on the product details page.\\
+\hline % 在表格最下方绘制横线
+Precondition& Users complete the browsing, they and are on the commodity details page.
+\\
+\hline % 在表格最下方绘制横线
+Basic event stream&Click on the "Join the shopping cart" button.\\
+\hline % 在表格最下方绘制横线
+Alternative flow&
+After the user logs in:
+\begin{itemize}[leftmargin=0.5mm]
+\item[1.] If the shopping cart information is saved in the browser, the goods are added to the user's shopping cart.
+\item[2.] If the goods have already existed in the shopping cart, the quantity of the goods is increased.
+\end{itemize}
+\\
+\hline % 在表格最下方绘制横线
+Abnormal&None\\
+\hline % 在表格最下方绘制横线
+Postconditions&Goods are added to shopping carts.\\
+\hline % 在表格最下方绘制横线
+\end{tabular}
+}
+\end{table}
+
+\subsection{Use Case: Confirm Orders}
+\begin{table}[H]
+\caption{Use Case 4.4.2 Confirm Orders}
+\centering
+\setlength{\tabcolsep}{10mm}{
+\begin{tabular}{|p{4cm}|p{8cm}|}
+\hline  % 在表格最上方绘制横线
+Use case name&Confirm Orders\\
+\hline  % 在表格最上方绘制横线
+Case ID&Use case 4.4.2\\
+\hline  %在第一行和第二行之间绘制横线
+Actor&Customer\\
+\hline % 在表格最下方绘制横线
+Use case description& Customer already have order information on the system, and then they are able to confirm the order. \\
+\hline % 在表格最下方绘制横线
+Preconditions& Customer have order in the virtual bookstore system and the order status is unconfirmed.
+\\
+\hline % 在表格最下方绘制横线
+Basic flow&
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item Customer are logged in.
+\item Customers make a request to the system that he/she want to confirm the order.
+\item Customers click on the "My Order" button.
+\item Customers confirm the unconfirmed order when they view their order list.
+\item The system successfully confirm the order.
+\end{enumerate}
+\\
+\hline % 在表格最下方绘制横线
+Alternative flow&
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item Customers modify the amount of goods they want to buy.
+\item Customers delete their orders.
+\end{enumerate}
+\\
+\hline
+Abnormal event stream&When Customers confirm the order, there may be system failure, such as network failure, database server failure, system pop-up system abnormal page, then confirm the order unsuccessfully, the system informs the Customer that the confirmation of the order is not completed.
+\\
+\hline
+Postconditions&The order is confirmed successfully.\\
+\hline % 在表格最下方绘制横线
+\end{tabular}
+}
+\end{table}
+
+\subsection{Use Case: Cancel Orders}
+\begin{table}[H]
+\caption{Use Case 4.4.3 Cancel Orders}
+\centering
+\setlength{\tabcolsep}{10mm}{
+\begin{tabular}{|p{4cm}|p{8cm}|}
+\hline  % 在表格最上方绘制横线
+Use case name&Cancel Orders\\
+\hline  % 在表格最上方绘制横线
+Case ID&Use case 4.4.3\\
+\hline  %在第一行和第二行之间绘制横线
+Actor&Customer\\
+\hline % 在表格最下方绘制横线
+Use case description& Customers already have order information on the system, and then they are able to cancel submitted orders. \\
+\hline % 在表格最下方绘制横线
+Preconditions& Customers' historical transaction records contain submitted orders but without confirmation of receipt.
+\\
+\hline % 在表格最下方绘制横线
+Basic flow&
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item Customer are logged in.
+\item Customers make a request to the system that he/she want to cancel the order.
+\item Customers enter "My Order" page.
+\item Customers click on the "Cancel Order" button. 
+\item The system successfully cancel the order.
+\end{enumerate}
+\\
+\hline % 在表格最下方绘制横线
+Alternative flow&
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item Customers modify the amount of goods they want to buy
+\item Customers confirm their orders.
+\end{enumerate}
+\\
+\hline
+Abnormal event stream&When Customers cancel the order, there may be system failure, such as network failure, database server failure, system pop-up system abnormal page, then confirm the order unsuccessfully, the system informs the Customer that the cancel of the order is not completed.
+\\
+\hline
+Postconditions&\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item The order is canceled successfully.
+\item The quantity of goods which are sold decrease, while the quantity of goods in trade increase.
+\end{enumerate}
+\\
+\hline % 在表格最下方绘制横线
+\end{tabular}
+}
+\end{table}
+
+
+\subsection{Use Case: Preorder}
+\begin{table}[H]
+\caption{Use Case 4.4.4 Preorder}
+\centering
+\setlength{\tabcolsep}{10mm}{
+\begin{tabular}{|p{4cm}|p{8cm}|}
+\hline  % 在表格最上方绘制横线
+Use case name&Preorder\\
+\hline  % 在表格最上方绘制横线
+Case ID&Use case 4.4.4\\
+\hline  %在第一行和第二行之间绘制横线
+Actor&Customer\\
+\hline % 在表格最下方绘制横线
+Use case description& Customer can preorder book lack of stock at that time. \\
+\hline % 在表格最下方绘制横线
+Preconditions& 
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item Customer already logins the book store, adds the book into cart.
+\item The book sold out and the books replenished are on the way.
+\item The “confirm order” button changes into “pre-order”.
+\item The system will show the books’ arrival date and arrival quantity.
+\end{enumerate}
+\\
+\hline % 在表格最下方绘制横线
+Basic flow&
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item Customer click the “pre-order” button.
+\item System will calculate taxes, delivery fee and discounts for the book.
+\item System will alert the book’s final price, arrival date and arrival quantity and ask whether sure the pre-order.
+\item Customer click “yes”.
+\item System check that the receipt information is complete and correct.
+\item If correct and complete, system show the message “preorder successfully”.
+\end{enumerate}
+\\
+\hline % 在表格最下方绘制横线
+Alternative flow&
+User clicks “no” button:
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item System redirects to the cart page.
+\end{enumerate}
+
+If receipt information incorrect or incomplete:
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item System alert the warning and return to the preorder page.
+\end{enumerate}
+
+\\
+\hline % 在表格最下方绘制横线
+Abnormal&None\\
+\hline % 在表格最下方绘制横线
+Postconditions&System will redirect to Use Case 4.4.5 Email Customer about Deadline of arrival date and quantity and delivery date.\\
+\hline % 在表格最下方绘制横线
+\end{tabular}
+}
+\end{table}
+\subsection{Use Case: Email Customer about Deadline}
+\subsection{Use Case: Calculate Taxes, Delivery Fee and Discounts}
+\begin{table}[H]
+\caption{Use Case 4.4.6 Calculate Taxes, Delivery Fee and Discounts}
+\centering
+\setlength{\tabcolsep}{10mm}{
+\begin{tabular}{|p{4cm}|p{8cm}|}
+\hline  % 在表格最上方绘制横线
+Use case name&Calculate Taxes, Delivery Fee and Discounts\\
+\hline  % 在表格最上方绘制横线
+Case ID&Use case 4.4.6\\
+\hline  %在第一行和第二行之间绘制横线
+Actor&System\\
+\hline % 在表格最下方绘制横线
+Use case description& System will calculate taxes, delivery fee and discounts according to law, delivery address, shipping address. \\
+\hline % 在表格最下方绘制横线
+Preconditions& 
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item Customer already logins the book store.
+\item Customer already confirms order or preorders one book.
+\end{enumerate}
+\\
+\hline % 在表格最下方绘制横线
+Basic flow&
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item System calculate the taxes according to legal.
+\item System calculate the delivery fees according to shipping address and delivery address.
+\item System calculate the discounts according to the discount plan.
+\item System sum up the Taxes, Delivery Fee and substrate the discount.
+\end{enumerate}
+\\
+\hline % 在表格最下方绘制横线
+Alternative flow&
+None.
+\\
+\hline % 在表格最下方绘制横线
+Abnormal&None\\
+\hline % 在表格最下方绘制横线
+Postconditions& None.\\
+\hline % 在表格最下方绘制横线
+\end{tabular}
+}
+\end{table}
+
+\section{Payment Module}
+\begin{figure}[H]
+	\centering  
+	\includegraphics[width=0.7\linewidth]{images/Shopping-Module.png}
+	\caption{Payment Module}  
+	\label{fig:Payment-Module}   
+\end{figure}
+
+\subsection{Use Case: Refund}
+\begin{table}[H]
+\caption{Use Case 4.5.1 Refund}
+\centering
+\setlength{\tabcolsep}{10mm}{
+\begin{tabular}{|p{4cm}|p{8cm}|}
+\hline  % 在表格最上方绘制横线
+Use case name&Refund\\
+\hline  % 在表格最上方绘制横线
+Case ID&Use case 4.5.1\\
+\hline  %在第一行和第二行之间绘制横线
+Actor&Customer\\
+\hline % 在表格最下方绘制横线
+Use case description& Customer have orders that have been successfully paid, and he/she can request for the refund.\\
+\hline % 在表格最下方绘制横线
+Preconditions& Customers have orders that have been successfully paid.
+\\
+\hline % 在表格最下方绘制横线
+Basic flow&
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item Customer are logged in.
+\item Customers enter the order management interface.
+\item Customers select the order which he/she want to be refunded.
+\item The system displays the selected order details.
+\item Customers click the "refund" button.
+\item Customers fill in the order’s refund information.
+\item Customers wait for the merchant to confirm the refund request.
+\item Customers submit the refund request.
+\item Merchants refund money according to the refund method chosen by Customers.
+\item The refund is done successfully.
+\end{enumerate}
+\\
+\hline % 在表格最下方绘制横线
+Alternative flow&
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item Customers cancel the refund after filling in the refund information. 
+\item Merchants refuse refund requests.
+\end{enumerate}
+\\
+\hline
+Abnormal event stream&When Customers request for refund, there may be system failure, such as network failure, database server failure, system pop-up system abnormal page, then refund unsuccessfully, the system informs the Customer that the refund is not completed.
+\\
+\hline
+Postconditions&\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item Refund successfully.
+\item Customers receive refunds.
+\item The quantity of goods which are sold decrease, while the quantity of goods in trade increase.
+\end{enumerate}
+\\
+\hline % 在表格最下方绘制横线
+\end{tabular}
+}
+\end{table}
+
+\subsection{Use Case: Pay}
+\begin{table}[H]
+\caption{Use Case 4.5.2 Pay}
+\centering
+\setlength{\tabcolsep}{10mm}{
+\begin{tabular}{|p{4cm}|p{8cm}|}
+\hline  % 在表格最上方绘制横线
+Use case name&Pay\\
+\hline  % 在表格最上方绘制横线
+Case ID&Use case 4.5.2\\
+\hline  %在第一行和第二行之间绘制横线
+Actor&Customer\\
+\hline % 在表格最下方绘制横线
+Use case description& Customer payment.\\
+\hline % 在表格最下方绘制横线
+Preconditions& Customers have logged on to the system.
+\\
+\hline % 在表格最下方绘制横线
+Basic flow&
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item Customer are click "Enter the Payment Center" and there is at least one item in the shopping cart.
+\item The system opens the order page and displays the list of goods, including name, price, quantity, total price, delivery address, delivery mode, etc.
+\item Customers choose the delivery mode, supporting cash on delivery, online payment, etc.
+\item Confirm the purchase and click "Submit the order".
+\item The system shows "Your order has been submitted successfully!" and the total amount of the order.
+\item The system jumps to the payment page, supporting Alipay, WeChat and so on.
+\item Customers complete payment, and then the purchase is completed.
+\item The system saves payment information and returns to the main page of the bookstore.
+\end{enumerate}
+\\
+\hline % 在表格最下方绘制横线
+Alternative flow&
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item If the customer has not logged on to the system, he/she is prompted to login the system first.
+\item If no account is registered, the customer is prompted to register the account first.
+\item If the customer checks out for the first time, he/she needs to fill in the delivery address, which includes: name, city, communication address, postal code, telephone number, etc.
+\item If the customer does not pay for the first time, the default delivery address is elected.
+\end{enumerate}
+\\
+\hline
+Abnormal event stream&When the system saves payment information, system failures may occur, such as network failures, database server failures, etc. The system pops up the system abnormal page and indicate the customer that the checkout is failed.
+\\
+\hline
+Postconditions&The system updates payment information.
+\\
+\hline % 在表格最下方绘制横线
+\end{tabular}
+}
+\end{table}
+
+\section{Additional Module}
+\begin{figure}[H]
+	\centering  
+	\includegraphics[width=0.7\linewidth]{images/Additional-Module.png}
+	\caption{Additional Module}  
+	\label{fig:Additional-Module}   
+\end{figure}
+
+\subsection{Use Case: Suggest to Purchase}
+
+\section{Management Module}
+\begin{figure}[H]
+	\centering  
+	\includegraphics[width=0.7\linewidth]{images/Manager-Module.png}
+	\caption{Management Module}  
+	\label{fig:Management-Module}   
+\end{figure}
+\subsection{Use Case: View Bestsellers Reports}
+\subsection{Use Case: View Customers Reports}
+\subsection{Use Case: View Suggested Books Reports}
+\subsection{Use Case: Modify Suggested Books Reports}
+\subsection{Use Case: Confirm Suggested Books}
+\subsection{Use Case: View Discounts Plan}
+\subsection{Use Case: Modify Discounts Plan}
+\subsection{Use Case: Add Discounts Plan}
+\subsection{Use Case: Delete Discounts Plan}
+
+\section{Inventory Module}
+\begin{figure}[H]
+	\centering  
+	\includegraphics[width=0.7\linewidth]{images/Purchase-Module.png}
+	\caption{Inventory Module}  
+	\label{fig:Inventory-Module}   
+\end{figure}
+\subsection{Use Case: View Reorder Point Report}
+\begin{table}[H]
+\caption{Use Case 4.8.1 View Reorder Point Report}
+\centering
+\setlength{\tabcolsep}{10mm}{
+\begin{tabular}{|p{4cm}|p{8cm}|}
+\hline  % 在表格最上方绘制横线
+Use case name&View Reorder Point Report\\
+\hline  % 在表格最上方绘制横线
+Case ID&Use case 4.8.1\\
+\hline  %在第一行和第二行之间绘制横线
+Actor&Purchaser\\
+\hline % 在表格最下方绘制横线
+Use case description&System can predict the reorder date and reorder amount (reorder point) for every book, and generate reorder point report according to reordering theory and the predicted data. Purchaser can view the reorder point report\\
+\hline % 在表格最下方绘制横线
+Precondition& Customer already logs in the book store.
+\\
+\hline % 在表格最下方绘制横线
+Basic event stream&1.Purchaser already logs in the book store inventory management system.
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item Purchaser clicks the “View Reorder Point Report” button.
+\item System predicts the reorder date and reorder amount (reorder point) for every book
+\item System generates reorder point report according to reorder inventory theory and the predicted data.
+\item System show the reorder point report to purchaser.
+\item Purchaser can view reorder point report.
+
+\end{enumerate}
+\\
+\hline % 在表格最下方绘制横线
+Alternative flow&None.
+\\
+\hline % 在表格最下方绘制横线
+Abnormal&None\\
+\hline % 在表格最下方绘制横线
+Postconditions& None.\\
+\hline % 在表格最下方绘制横线
+\end{tabular}
+}
+\end{table}
+
+\subsection{Use Case: Purchase}
+\begin{table}[H]
+\caption{Use Case 4.8.2 Purchase}
+\centering
+\setlength{\tabcolsep}{10mm}{
+\begin{tabular}{|p{4cm}|p{8cm}|}
+\hline  % 在表格最上方绘制横线
+Use case name&Purchase\\
+\hline  % 在表格最上方绘制横线
+Case ID&Use case 4.8.2\\
+\hline  %在第一行和第二行之间绘制横线
+Actor&Purchaser\\
+\hline % 在表格最下方绘制横线
+Use case description&Purchaser can purchase new books according to Reorder Point Report.\\
+\hline % 在表格最下方绘制横线
+Precondition& 
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item Purchaser already logins the book store inventory management system.
+\item Purchaser already view reorder point report.
+\end{enumerate}
+\\
+\hline % 在表格最下方绘制横线
+Basic event stream&
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item Purchaser selects books to replenish in View Reorder Point Report.
+\item Purchaser click “Purchase” button.
+\end{enumerate}
+\\
+\hline % 在表格最下方绘制横线
+Alternative flow&
+Purchaser click the “modify purchase date and quantity” button before click “Purchase”:
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item Purchaser can modify purchase date and quantity of books selected to replenish in View Reorder Point Report.
+\item Purchaser click "save" button.
+\end{enumerate}
+\\
+\hline % 在表格最下方绘制横线
+Abnormal&When purchaser purchaser, there may be system failure, such as network failure, database server failure, system pop-up system abnormal page, then confirm the order unsuccessfully, the system informs the purchaser that the purchase is not completed.\\
+\hline % 在表格最下方绘制横线
+Postconditions& System will redirect to Use Case 4.5.2 Pay to pay supplier.\\
+\hline % 在表格最下方绘制横线
+\end{tabular}
+}
+\end{table}
+
+\subsection{Use Case: Handle Order Exceptions}
+\begin{table}[H]
+\caption{Use Case 4.8.3 Handle Order Exceptions}
+\centering
+\setlength{\tabcolsep}{10mm}{
+\begin{tabular}{|p{4cm}|p{8cm}|}
+\hline  % 在表格最上方绘制横线
+Use case name&Handle Order Exceptions\\
+\hline  % 在表格最上方绘制横线
+Case ID&Use case 4.8.3\\
+\hline  %在第一行和第二行之间绘制横线
+Actor&Purchaser\\
+\hline % 在表格最下方绘制横线
+Use case description&Purchaser can add the book into reorder point report manually to handle the order exceptions\\
+\hline % 在表格最下方绘制横线
+Precondition&
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item Purchaser already logs in the book store inventory management system.
+\item Purchaser already view order exceptions.
+\item There is any order exception in status “Unprocessed”.
+\end{enumerate}
+\\
+\hline % 在表格最下方绘制横线
+Basic event stream&
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item Purchaser can add the book causing order exception into reorder point report manually to handle the order exception.
+\item The status of order exception changes to “processed”.
+\end{enumerate}
+
+\\
+\hline % 在表格最下方绘制横线
+Alternative flow&
+None.
+\\
+\hline % 在表格最下方绘制横线
+Abnormal&None\\
+\hline % 在表格最下方绘制横线
+Postconditions&The abnormal account will recover.\\
+\hline % 在表格最下方绘制横线
+\end{tabular}
+}
+\end{table}
+
+\subsection{Use Case: View Stock Warnings}
+\begin{table}[H]
+\caption{Use Case 4.8.4 View Stock Warnings}
+\centering
+\setlength{\tabcolsep}{10mm}{
+\begin{tabular}{|p{4cm}|p{8cm}|}
+\hline  % 在表格最上方绘制横线
+Use case name&View Stock Warnings\\
+\hline  % 在表格最上方绘制横线
+Case ID&Use case 4.8.4\\
+\hline  %在第一行和第二行之间绘制横线
+Actor&Purchaser\\
+\hline % 在表格最下方绘制横线
+Use case description&When it is close to the order date of the reorder point, the system send the purchaser stock warning to remind him of reordering. Purchaser can view stock warnings to see what book needs replenishment.\\
+\hline % 在表格最下方绘制横线
+Precondition& Purchaser already logs in the book store inventory management system.
+\\
+\hline % 在表格最下方绘制横线
+Basic event stream&
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item Purchaser click “View Stock Warning” button.
+\item System collect all books whose inventory is below safety stock and show purchaser.
+\end{enumerate}
+\\
+\hline % 在表格最下方绘制横线
+Alternative flow&
+None.
+\\
+\hline % 在表格最下方绘制横线
+Abnormal&None\\
+\hline % 在表格最下方绘制横线
+Postconditions& None.\\
+\hline % 在表格最下方绘制横线
+\end{tabular}
+}
+\end{table}
+
+\section{User Manager Module}
+\begin{figure}[H]
+	\centering  
+	\includegraphics[width=0.7\linewidth]{images/User-Manager-Module.png}
+	\caption{User Manager Module}  
+	\label{fig:User-Manager-Module}   
+\end{figure}
+
+\subsection{Use Case: Handle Accounts Exceptions}
+\begin{table}[H]
+\caption{Use Case 4.9.1 Handle Accounts Exceptions}
+\centering
+\setlength{\tabcolsep}{10mm}{
+\begin{tabular}{|p{4cm}|p{8cm}|}
+\hline  % 在表格最上方绘制横线
+Use case name&Handle Accounts Exceptions\\
+\hline  % 在表格最上方绘制横线
+Case ID&Use case 4.9.1\\
+\hline  %在第一行和第二行之间绘制横线
+Actor&Administrator\\
+\hline % 在表格最下方绘制横线
+Use case description& Administrators handle accounts exceptions.\\
+\hline % 在表格最下方绘制横线
+Preconditions& \begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item Users have logged in as administrators.
+\item There are accounts exceptions in the virtual bookstore system.
+\end{enumerate}
+\\
+\hline % 在表格最下方绘制横线
+Basic flow&
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item Users are logged in as administrators.
+\item Administrators enter “Account Management” page.
+\item Administrators modify abnormal accounts.
+\item Administrators click the “confirm” button 
+\item The system informs that the account exception is handled successfully.
+\end{enumerate}
+\\
+\hline % 在表格最下方绘制横线
+Alternative flow&
+\begin{enumerate}[label=\arabic*.,leftmargin=0.5mm]
+\item Administrators cancel account modification.
+\item Administrators delete accounts
+\end{enumerate}
+\\
+\hline
+Abnormal event stream&When administrators handle accounts exceptions, there may be system failure, such as network failure, database server failure, system pop-up system abnormal page, then the account exception is not handled successfully, and the system informs administrators that accounts exceptions are not handled.
+\\
+\hline
+Postconditions&The account exception is handled successfully.
+\\
+\hline % 在表格最下方绘制横线
+\end{tabular}
+}
+\end{table}
+
+\chapter{Activity Diagrams}
+\section{Accounts Module}
+\subsection{Use Case: Log in}
+\begin{figure}[H]
+	\centering  
+	\includegraphics[width=0.7\linewidth]{content/login.png}  
+	\caption{log in}  
+	\label{fig:mcmthesis-logo}   
+\end{figure}
+
+\subsection{Use Case: Log out}
+\begin{figure}[H]
+	\centering  
+	\includegraphics[width=0.7\linewidth]{content/logout.jpeg}  
+	\caption{log out}  
+	\label{fig:Log-out}   
+\end{figure}
+
+\subsection{Use Case: Register}
+\begin{figure}[H]
+	\centering  
+	\includegraphics[width=0.7\linewidth]{content/register.jpeg}
+	\caption{register}  
+	\label{fig:Register}   
+\end{figure}
+
+\section{Browse Module}
+\subsection{Use Case: Browse Personal Recommendation}
+\begin{figure}[H]
+	\centering  
+	\includegraphics[width=0.7\linewidth]{images/recommendation.png}
+	\caption{Use case 4.3.2 Browse Personal Recommendation}  
+	\label{fig:Browse-Recommendation}   
+\end{figure}
+
+\subsection{Use Case: Browse Knowledge Map}
+\begin{figure}[H]
+	\centering  
+	\includegraphics[width=0.7\linewidth]{images/knowledge-map.png}
+	\caption{Use case 4.3.3 Browse Knowledge Map}  
+	\label{fig:Browse-Knowledge-Map}   
+\end{figure}
+
+\subsection{Use Case: Browse Golden Words}
+\begin{figure}[H]
+	\centering  
+	\includegraphics[width=0.7\linewidth]{images/golden-words.png}
+	\caption{Use case 4.3.5 Browse Golden Words}  
+	\label{fig:Browse-Golden-Words}   
+\end{figure}
+
+
+\section{Shopping Module}
+\subsection{Use Case: Email Customer about Deadline}
+\begin{figure}[H]
+	\centering  
+	\includegraphics[width=0.7\linewidth]{images/email.png}
+	\caption{Use case 4.3.5 Email Customer about Deadline}  
+	\label{fig:Email-Customer-about-Deadline}   
+\end{figure}
+
+\subsection{Use Case: Add to Chart}
+\begin{figure}[H]
+	\centering  
+	\includegraphics[width=0.7\linewidth]{images/add-to-cart.png}
+	\caption{Use case 4.3.5 Add to Chart}  
+	\label{fig:Add-to-Chart}   
+\end{figure}
+
+\subsection{Use Case: Preorder}
+\begin{figure}[H]
+	\centering  
+	\includegraphics[width=0.7\linewidth]{images/pre-order.png}
+	\caption{Use case 4.3.5 Preorder}  
+	\label{fig:Preorder}   
+\end{figure}
+
+\subsection{Use Case: Confirm Order}
+\begin{figure}[H]
+	\centering  
+	\includegraphics[width=0.7\linewidth]{images/confirm-order.png}
+	\caption{Use case 4.3.5 Confirm Order}  
+	\label{fig:Confirm-Order}   
+\end{figure}
+
+\section{Additional Module}
+\subsection{Use Case: Suggest to Purchase}
+
+\section{Pay Module}
+\subsection{Pay}
+\subsection{Refund}
+
+\section{Management Module}
+\subsection{Use Case: View Bestsellers Reports}
+\subsection{Use Case: View Customers Reports}
+\subsection{Use Case: View Suggested Books Reports}
+\subsection{Use Case: Add Discounts Plan}
+\subsection{Use Case: Modify Discounts Plan}
+\subsection{Use Case: Delete Discounts Plan}
+
+\section{Inventory Module}
+\subsection{Use Case: View Reorder Point View}
+\subsection{Use Case: Purchase}
+\begin{figure}[H]
+	\centering  
+	\includegraphics[width=0.7\linewidth]{content/purchase.jpeg}  
+	\caption{purchase}  
+	\label{fig:mcmthesis-logo}   
+\end{figure}
+\subsection{Use Case: View Stock Warning}
+
+\chapter{Other Nonfunctional Requirements}
+\label{Other Nonfunctional Requirements}
+
+\section{Performance}
+\section{Reliability}
+\section{Security}
+\section{Availability}
+\section{Maintainability}
+\section{Understandability}
+
+\chapter{Other Requirements}
+\label{Other Requirements}
+
+\begin{appendices}
+\chapter{Glossary}
+\chapter{Analysis Models}
+\chapter{To Be Determined List}
+
+
+\end{appendices}
+
+
